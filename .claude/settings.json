@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"${CLAUDE_PROJECT_DIR:-/Users/jory/jory-notes}/.claude/hooks/记录笔记.sh\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"${CLAUDE_PROJECT_DIR:-/Users/jory/jory-notes}/.claude/hooks/收尾关卡.sh\"",
+            "timeout": 20,
+            "statusMessage": "检查知识笔记的 AI 写作痕迹…"
+          }
+        ]
+      }
+    ]
+  }
+}

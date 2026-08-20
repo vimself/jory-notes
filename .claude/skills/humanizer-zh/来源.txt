@@ -1,0 +1,4 @@
+来源: https://github.com/op7418/Humanizer-zh
+提交: 91f3d394db8419c20d67ebe22a96cf8fee0a404b
+许可: MIT License
+说明: 翻译自 blader/humanizer
