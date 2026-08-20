@@ -1,0 +1,7 @@
+{
+  "attachmentFolderPath": "附件",
+  "newFileLocation": "current",
+  "alwaysUpdateLinks": true,
+  "useMarkdownLinks": false,
+  "userIgnoreFilters": ["模板/"]
+}
