@@ -3,5 +3,8 @@
   "newFileLocation": "current",
   "alwaysUpdateLinks": true,
   "useMarkdownLinks": false,
-  "userIgnoreFilters": ["模板/"]
+  "userIgnoreFilters": [
+    "模板/"
+  ],
+  "promptDelete": false
 }

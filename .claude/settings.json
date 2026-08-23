@@ -25,5 +25,9 @@
         ]
       }
     ]
+  },
+  "enabledPlugins": {
+    "security-guidance@claude-plugins-official": false,
+    "hookify@claude-plugins-official": false
   }
 }
