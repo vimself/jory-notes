@@ -27,3 +27,15 @@ git cherry pick
 合并冲突的解决
 
 git pull rebase
+
+fast forward
+
+git diff
+
+git lfs
+
+github action   CI/CD
+
+workflow job step event
+
+github action 经典使用案例
