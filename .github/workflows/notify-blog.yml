@@ -1,0 +1,26 @@
+name: 通知博客重建
+
+# 只有正式笔记和附件变了才重建。
+# 「草稿:」提交不触发 —— 和知识库「草稿提交不进日志」的取向一致：
+# 捕获不是知识库的结构性变更，博客也不该为此重新部署。
+on:
+  push:
+    branches: [main]
+    paths:
+      - '计算机/**'
+      - '附件/**'
+
+permissions: {}
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 触发 vimself.github.io 重建
+        run: |
+          curl -sS -f -X POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer ${{ secrets.BLOG_DISPATCH_TOKEN }}" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            https://api.github.com/repos/vimself/vimself.github.io/dispatches \
+            -d '{"event_type":"notes-updated","client_payload":{"sha":"${{ github.sha }}"}}'
