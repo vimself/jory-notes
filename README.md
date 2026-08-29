@@ -84,3 +84,12 @@ flowchart LR
 
 结论被推翻就直接改正、删掉旧结论，不留「~~已废弃~~」和版本对照 ——
 历史在 git 里，知识库只回答「现在最好的理解是什么」。
+
+## 授权
+
+笔记内容采用 [CC BY 4.0](LICENSE) —— 转载、改写、商用都可以，注明出处即可。
+
+例外：`.claude/skills/humanizer-zh/` 是 vendored 进来的第三方 skill（[op7418/Humanizer-zh](https://github.com/op7418/Humanizer-zh)），
+保留它自己的 MIT 协议，见该目录下的 `LICENSE`。
+
+驱动这个库的博客管道在 [vimself/vimself.github.io](https://github.com/vimself/vimself.github.io)，MIT。
