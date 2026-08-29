@@ -424,8 +424,3 @@ git config --global rerere.enabled true
 - `git help merge`，`--squash`、`--ff` 系列选项与各合并策略的权威描述
 - `git help rerere`，记录与复用冲突解法的机制
 - `git help everyday`，按角色组织的常用命令集
-
-## 待补充
-- 交互式变基 `git rebase -i`（reword / edit / squash / fixup / drop）值得单独成篇：[[Git 交互式变基]]
-- `ort` 策略相对旧 `recursive` 实现上的具体差异
-- 分支模型选型（Git Flow / GitHub Flow / trunk based）留给 [[Pull Request]] 一起讲

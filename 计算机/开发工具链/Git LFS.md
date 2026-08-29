@@ -86,8 +86,3 @@ git commit -m "配置 LFS 跟踪 psd 文件"
 ## 参考
 - Git LFS 官网：https://git-lfs.com/
 - GitHub 关于大文件的说明：https://docs.github.com/en/repositories/working-with-files/managing-large-files
-
-## 待补充
-- `git lfs migrate` 把历史中已有的大文件转成 LFS 的具体流程与风险（本机未安装 git-lfs，命令与输出未实测）
-- `git lfs prune`、`git lfs fetch --recent` 的本地缓存清理策略
-- LFS 存储与流量的具体配额数字（随 GitHub 套餐变动，用前查当期文档）

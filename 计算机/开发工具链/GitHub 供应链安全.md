@@ -108,8 +108,3 @@ Secret scanning 会扫描仓库内容，识别出符合已知密钥格式的字�
 ## 参考
 - Dependabot 配置项完整参考：https://docs.github.com/en/code-security/dependabot/working-with-dependabot/dependabot-options-reference
 - 代码扫描介绍：https://docs.github.com/en/code-security/code-scanning/introduction-to-code-scanning/about-code-scanning
-
-## 待补充
-- 各套餐下三项功能在私有仓库的可用性差异（随政策变动，用前查当期文档）
-- 用 `git filter-repo` 从历史中彻底清除已泄露密钥的完整流程
-- CodeQL 自定义查询的编写入门

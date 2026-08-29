@@ -157,7 +157,3 @@ v1.4.2
 ## 参考
 - `git help tag`，全部选项与列表筛选语法
 - 语义化版本规范：https://semver.org/lang/zh-CN/
-
-## 待补充
-- 签名标签 `git tag -s` 与 GPG 验证流程
-- `git describe` 基于标签生成版本字符串的用法

@@ -136,8 +136,3 @@ gh pr checkout <编号>  # 把别人的 PR 拉到本地检出，方便实际跑�
 ## 参考
 - GitHub 关于 PR 合并方式：https://docs.github.com/en/pull-requests
 - 分支保护与规则集：https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository
-
-## 待补充
-- 合并队列（merge queue）的具体工作机制与适用规模
-- CODEOWNERS 文件的语法与自动指派评审者的规则
-- 分支模型选型（Git Flow / GitHub Flow / trunk based）的取舍

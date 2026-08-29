@@ -118,8 +118,3 @@ push 到 main
 - 部署到环境：https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/deploy-to-environment
 - 管理环境：https://docs.github.com/en/actions/how-tos/deploy/configure-and-manage-deployments/manage-environments
 - 审批部署：https://docs.github.com/en/actions/how-tos/deploy/configure-and-manage-deployments/review-deployments
-
-## 待补充
-- 环境保护规则里「等待计时器」的具体上限与配置位置
-- 部署并发（`concurrency`）在多环境链路下的推荐写法
-- OIDC 免密钥认证到云厂商（AWS/阿里云）的配置流程

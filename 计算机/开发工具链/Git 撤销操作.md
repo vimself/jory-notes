@@ -250,7 +250,3 @@ git clean -f -d      # 看清楚了，确认删
 ## 参考
 - `git help reset`，四种模式的权威定义
 - `git help git`，其中 "Reset, restore and revert" 一节讲三者分工
-
-## 待补充
-- reflog 的默认过期时长（`gc.reflogExpire` / `gc.reflogExpireUnreachable` 的默认值待确认）
-- `git reset --merge` 与 `--keep` 在「带已 add 改动」场景下的具体差异，需要构造用例实测

@@ -89,8 +89,3 @@ jobs:
 ## 参考
 - GitHub Packages 介绍：https://docs.github.com/en/packages/learn-github-packages/introduction-to-github-packages
 - 容器仓库用法：https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry
-
-## 待补充
-- 各套餐下 Packages 的存储与流量配额数字（随政策变动，用前查当期文档）
-- 用 fine-grained token（而非 classic）访问 Packages 的当前支持情况
-- npm / Maven registry 的具体域名与配置文件写法（本篇未实测）

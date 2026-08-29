@@ -147,8 +147,3 @@ secret 本身要安全存储，**不要硬编码、不要提交进仓库**。
 - Webhook 介绍：https://docs.github.com/en/webhooks/about-webhooks
 - 验证 webhook 签名：https://docs.github.com/en/webhooks/using-webhooks/validating-webhook-deliveries
 - `gh` 手册：https://cli.github.com/manual/
-
-## 待补充
-- REST API 速率限制的具体数字（认证/未认证/GraphQL 各不相同，用前查当期文档）
-- GitHub App 相对 PAT 的优势与安装流程
-- fine-grained token 对 [[GitHub Packages]] 等功能的支持现状

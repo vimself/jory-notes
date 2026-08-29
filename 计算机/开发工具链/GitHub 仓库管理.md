@@ -97,8 +97,3 @@ Insights 里有一组统计图表，日常真正有用的是这几个：
 ## 参考
 - Projects 介绍：https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects
 - 组织与团队：https://docs.github.com/en/organizations
-
-## 待补充
-- 组织角色（Read / Triage / Write / Maintain / Admin）各自的具体权限边界
-- 个人仓库转移到组织的完整流程与影响面
-- Projects 的自动化（内置工作流）配置方式

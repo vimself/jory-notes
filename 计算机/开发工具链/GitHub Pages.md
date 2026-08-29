@@ -79,7 +79,3 @@ GitHub 明确建议：**当你想用 Jekyll 之外的构建流程、或者不想
 - 配置发布源：https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
 - 绕过 Jekyll：https://github.blog/news-insights/bypassing-jekyll-on-github-pages/
 - Pages 与 Jekyll：https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll
-
-## 待补充
-- 免费套餐下 Pages 的站点大小与月流量软限制（数字随政策变动，用前查当期文档）
-- 私有仓库使用 Pages 的套餐要求

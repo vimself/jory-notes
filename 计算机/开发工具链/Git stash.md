@@ -175,7 +175,3 @@ git stash drop
 
 ## 参考
 - `git help stash`，全部子命令与选项
-
-## 待补充
-- stash 在底层实际上是提交对象，`git stash create` / `store` 的低层用法
-- `--keep-index`（`-k`）在「只测试已暂存部分」场景下的用法

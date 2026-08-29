@@ -260,8 +260,3 @@ jobs:
 - 工作流语法完整参考：https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax
 - 官方起步文档：https://docs.github.com/en/actions/get-started/quickstart
 - 用 Actions 把国外 Docker 镜像转存到国内仓库的现成方案：https://github.com/tech-shrimp/docker_image_pusher
-
-## 待补充
-- 自建 runner（self-hosted）的部署与安全边界
-- 可复用工作流（`workflow_call`）与复合 action 的写法差异
-- `actions/cache` 的键设计与命中率调优

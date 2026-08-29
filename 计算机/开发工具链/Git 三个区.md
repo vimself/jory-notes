@@ -267,7 +267,3 @@ git rm --cached f.txt
 ## 参考
 - `git help glossary`，其中 index、working tree 的官方定义
 - `git help status`，短格式每个字符的完整含义表
-
-## 待补充
-- `.git/index` 的二进制格式，以及用 `git ls-files --stage` 直接读它的方法
-- 稀疏检出（sparse-checkout）会怎么影响三个区的对应关系
