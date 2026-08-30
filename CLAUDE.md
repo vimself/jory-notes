@@ -189,6 +189,8 @@ updated: 2026-08-20
 | `技术/GitHub` | GitHub 平台功能：PR、仓库管理、Pages、Packages、API |
 | `技术/CI-CD` | 持续集成与部署，跨工具通用 |
 | `技术/开源` | 开源协议、开源协作与贡献流程 |
+| `技术/Agent` | AI Agent 的构成与设计：harness、子代理、循环与目标控制 |
+| `技术/Claude Code` | Claude Code 平台功能：Skills、subagent、hooks、MCP、CLI 用法 |
 
 标签只描述「是什么技术、什么类型」，**不描述学科和领域**——那是文件夹的职责。
 
