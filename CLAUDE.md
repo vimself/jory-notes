@@ -191,6 +191,9 @@ updated: 2026-08-20
 | `技术/开源` | 开源协议、开源协作与贡献流程 |
 | `技术/Agent` | AI Agent 的构成与设计：harness、子代理、循环与目标控制 |
 | `技术/Claude Code` | Claude Code 平台功能：Skills、subagent、hooks、MCP、CLI 用法 |
+| `技术/Java` | Java 语言与生态的通用内容 |
+| `技术/Maven` | Maven 构建工具：POM、生命周期、依赖管理 |
+| `技术/MyBatis` | MyBatis 持久层框架：映射文件、Mapper 接口、参数与结果映射 |
 
 标签只描述「是什么技术、什么类型」，**不描述学科和领域**——那是文件夹的职责。
 
