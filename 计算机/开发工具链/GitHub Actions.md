@@ -1,6 +1,6 @@
 ---
 tags: [类型/概念, 技术/GitHub, 技术/CI-CD]
-aliases: [GitHub Action, Actions, workflow, 工作流, CI/CD, 持续集成, 持续部署, runner, 运行器, job, step, matrix, 矩阵构建, GITHUB_TOKEN, actions/checkout]
+aliases: [GitHub Action, Actions]
 created: 2026-08-28
 updated: 2026-08-28
 ---

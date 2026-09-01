@@ -1,6 +1,6 @@
 ---
 tags: [类型/实践, 技术/GitHub]
-aliases: [GitHub Packages, ghcr.io, Container registry, 容器镜像仓库, 私有制品库, npm registry, 包管理, 制品仓库]
+aliases: [ghcr.io]
 created: 2026-08-28
 updated: 2026-08-28
 ---

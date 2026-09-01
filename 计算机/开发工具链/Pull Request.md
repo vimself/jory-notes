@@ -1,6 +1,6 @@
 ---
 tags: [类型/概念, 技术/GitHub]
-aliases: [PR, 拉取请求, pull request, 合并请求, code review, 代码评审, fork, 分支保护, protected branch, rulesets, gh pr]
+aliases: [PR, 拉取请求, 合并请求]
 created: 2026-08-28
 updated: 2026-08-28
 ---

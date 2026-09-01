@@ -1,6 +1,6 @@
 ---
 tags: [类型/实践, 技术/Git]
-aliases: [git stash, 贮藏, 暂存改动, 储藏, stash pop, stash apply, 保存工作现场]
+aliases: [贮藏, 储藏]
 created: 2026-08-28
 updated: 2026-08-28
 ---

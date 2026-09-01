@@ -1,6 +1,6 @@
 ---
 tags: [类型/实践, 技术/Git]
-aliases: [Git tag, git tag, 标签, 轻量标签, 附注标签, annotated tag, lightweight tag, 语义化版本, SemVer, 打标签, 发版]
+aliases: [Git tag, 标签]
 created: 2026-08-28
 updated: 2026-08-28
 ---

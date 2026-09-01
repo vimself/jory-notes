@@ -1,6 +1,6 @@
 ---
 tags: [类型/实践, 技术/GitHub]
-aliases: [GitHub Pages, 静态网站托管, 个人站点, 项目站点, user site, project site, gh-pages, 免费建站, Jekyll]
+aliases: [gh-pages]
 created: 2026-08-28
 updated: 2026-08-28
 ---

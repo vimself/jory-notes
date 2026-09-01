@@ -56,7 +56,15 @@ Obsidian 个人技术知识库。你的职责是按下面的规则增、改、�
 
 然后：定领域（读 `目录.md`）→ 定文件名 → 按 `模板/笔记模板.md` 写（排错类用 `模板/排错模板.md`）→ 提交。
 
-**`aliases` 必须认真写**，它是防重复的主承力构件——把以后可能用来搜它的所有叫法都写进去：`aliases: [全局解释器锁, GIL, Global Interpreter Lock]`
+**`aliases` 只写「同一个东西的别的叫法」**——同义词、缩写、中英文对照、正式名与俗名、合并掉的旧标题：`aliases: [全局解释器锁, GIL, Global Interpreter Lock]`
+
+检验只有一条：**我会不会在别的笔记里写 `[[这个名字]]`，并且期望它落到这篇？** 会 → 是别名；不会 → 别写。下面三类看着像关键词，但没人会拿它们写双链，一个都不要进：
+
+- **API 名、类名、命令、配置项**：`doGet`、`HttpServletRequest`、`git stash`、`web.xml`——正文里本来就有，去重靠的是「增」流程第 2 步的全文 `Grep`，不是 `aliases`
+- **子话题**：`请求转发`、`变基`、`轻量标签`——该独立成篇的留一个悬空双链当待办，不该独立的它就是正文的一节
+- **和文件名重复的**，以及 `README`、`自动化`、`构建工具` 这种通用到必然被别人认领的词
+
+**别名不是免费的**：每写一个就往下面那张全局解析表里塞一个未来的撞车点，而收益只在「有人真的会用这个名字写双链」时才兑现。宁缺毋滥——一篇 1~5 个是常态，超过 8 个基本说明混进了上面三类。
 
 **别名和笔记名共用一张全局解析表，必须全库唯一。** 表按「名字 → 笔记」建，大小写不敏感；同一个名字被两篇认领时，`[[这个名字]]` 落到哪一篇是掷骰子，所以博客构建把它判成 fatal 直接中断。写完 `aliases` 顺手跑一次体检第 7 项，比让部署替你发现快得多。
 
@@ -139,7 +147,13 @@ find 草稿箱 -mindepth 1 -type d                            # 5 草稿箱必�
 # 6 草稿滞留时长，最旧在前（未提交的草稿回退用文件时间）
 for f in 草稿箱/*.md; do [ -e "$f" ] || continue; d=$(git log -1 --format=%ad --date=short -- "$f"); [ -z "$d" ] && d=$(date -r "$f" +%Y-%m-%d); echo "$d $f"; done | sort
 # 7 名字冲突：笔记名与别名共用一张解析表，全库唯一，输出应为空
-for f in */*/*.md; do { basename "$f" .md; sed -n 's/^aliases: *\[\(.*\)\]/\1/p' "$f" | tr ',' '\n'; } | sed 's/^ *//;s/ *$//' | tr 'A-Z' 'a-z' | grep -v '^$' | sort -u; done | sort | uniq -d
+#   行内式和 YAML 列表式都要认 —— Obsidian 属性面板一编辑就会把行内式重写成列表式
+A='BEGIN{fm=0;inl=0} /^---$/{fm++;if(fm==2)exit;next} fm!=1{next}
+/^aliases:[[:space:]]*\[/{s=$0;sub(/^aliases:[[:space:]]*\[/,"",s);sub(/\].*$/,"",s);n=split(s,X,",");for(i=1;i<=n;i++)print X[i];inl=0;next}
+/^aliases:[[:space:]]*$/{inl=1;next}
+inl&&/^[[:space:]]+-[[:space:]]*/{s=$0;sub(/^[[:space:]]*-[[:space:]]*/,"",s);print s;next}
+/^[^[:space:]]/{inl=0}'
+for f in */*/*.md; do { basename "$f" .md; awk "$A" "$f"; } | sed 's/^ *//;s/ *$//' | tr 'A-Z' 'a-z' | grep -v '^$' | sort -u; done | sort | uniq -d
 ```
 
 8. **查重**：`Glob */*/*.md` 通读文件名找语义相近的对——没有命令能做语义判断，这一项靠你。

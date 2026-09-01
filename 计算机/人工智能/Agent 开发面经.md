@@ -1,6 +1,6 @@
 ---
 tags: [类型/概念, 技术/Agent, 技术/Claude Code]
-aliases: [Agent 面试题, AI Agent 面经, AI Coding 工作流, harness, Agent Harness, 马鞍理论, Loop 工程, goal 工程, 目标循环, Claude Code Skills, SKILL.md, 子代理, subagent, 上下文隔离]
+aliases: [Agent 面试题, AI Agent 面经]
 created: 2026-08-30
 updated: 2026-08-30
 ---

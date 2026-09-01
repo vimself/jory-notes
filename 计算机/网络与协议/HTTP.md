@@ -1,6 +1,6 @@
 ---
 tags: [类型/概念, 技术/HTTP]
-aliases: [超文本传输协议, Hypertext Transfer Protocol, HTTP 报文, HTTP 请求, HTTP 响应, 请求行, 状态行, 请求头, 响应头, HTTP 状态码, HTTP 请求方法, 报文格式]
+aliases: [超文本传输协议, Hypertext Transfer Protocol]
 created: 2026-09-01
 updated: 2026-09-01
 ---

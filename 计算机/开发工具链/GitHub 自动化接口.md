@@ -1,6 +1,6 @@
 ---
 tags: [类型/实践, 技术/GitHub]
-aliases: [GitHub API, REST API, webhook, 网络钩子, gh CLI, gh 命令行, X-Hub-Signature-256, personal access token, PAT, GitHub App, 自动化]
+aliases: [GitHub API]
 created: 2026-08-28
 updated: 2026-08-28
 ---

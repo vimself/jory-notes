@@ -9,8 +9,24 @@ cd "$ROOT" || exit 0
 
 # 归一化对齐博客的 normalizeKey：去首尾空格 + 转小写（中文无大小写，只影响英文别名）。
 # 同一篇内部先 sort -u，自己和自己不算撞。
-# 只认 `aliases: [a, b]` 这种行内写法 —— 知识库一直这么写；真有人改成 YAML 列表式，
-# 这里会漏掉，届时仍由构建兜底。
+#
+# 行内式 `aliases: [a, b]` 和 YAML 列表式（`aliases:` 后跟若干 `  - a`）都要认：
+# 在 Obsidian 的属性面板里编辑一次 aliases，它就会把行内式重写成列表式，
+# 只认行内式的话那篇会**静默掉出扫描**，等推上去才由构建兜底 —— 正是这道关卡要避免的事。
+# 只扫 frontmatter（第二个 --- 就停），否则正文里的无序列表会被当成别名。
+ALIASES_AWK='
+  BEGIN { fm = 0; inl = 0 }
+  /^---$/ { fm++; if (fm == 2) exit; next }
+  fm != 1 { next }
+  /^aliases:[[:space:]]*\[/ {
+    s = $0; sub(/^aliases:[[:space:]]*\[/, "", s); sub(/\].*$/, "", s)
+    n = split(s, A, ","); for (i = 1; i <= n; i++) print A[i]
+    inl = 0; next
+  }
+  /^aliases:[[:space:]]*$/ { inl = 1; next }
+  inl && /^[[:space:]]+-[[:space:]]*/ { s = $0; sub(/^[[:space:]]*-[[:space:]]*/, "", s); print s; next }
+  /^[^[:space:]]/ { inl = 0 }
+'
 CONFLICTS=$(
   for f in */*/*.md; do
     [ -e "$f" ] || continue
@@ -18,7 +34,7 @@ CONFLICTS=$(
     case "$f" in (草稿箱/*|模板/*|日志/*|附件/*) continue ;; esac
     {
       basename "$f" .md
-      sed -n 's/^aliases: *\[\(.*\)\]/\1/p' "$f" | tr ',' '\n'
+      awk "$ALIASES_AWK" "$f"
     } | sed 's/^[[:space:]]*//;s/[[:space:]]*$//' | tr 'A-Z' 'a-z' | grep -v '^$' | sort -u |
       while IFS= read -r n; do printf '%s\t%s\n' "$n" "$f"; done
   done | sort | awk -F'\t' '

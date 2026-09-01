@@ -1,6 +1,6 @@
 ---
 tags: [类型/实践, 技术/Tomcat, 技术/Java, 技术/Maven]
-aliases: [Apache Tomcat, catalina, CATALINA_HOME, CATALINA_BASE, server.xml, tomcat7-maven-plugin, WAR 包, webapp]
+aliases: [Apache Tomcat, catalina]
 created: 2026-09-01
 updated: 2026-09-01
 ---

@@ -1,6 +1,6 @@
 ---
 tags: [类型/概念, 技术/MyBatis, 技术/Java]
-aliases: [MyBatis 3, Mapper, Mapper 接口, 映射文件, SqlSession, SqlSessionFactory, mybatis-config.xml, resultMap, 参数传递, 半自动 ORM, 持久层框架]
+aliases: [MyBatis 3, 半自动 ORM]
 created: 2026-08-31
 updated: 2026-08-31
 ---

@@ -1,6 +1,6 @@
 ---
 tags: [类型/实践, 技术/GitHub, 技术/CI-CD]
-aliases: [GitHub Environments, deployment environment, 部署环境, 环境保护规则, required reviewers, 环境密钥, environment secrets, 审批部署, 灰度发布]
+aliases: [GitHub Environments, deployment environment, 部署环境]
 created: 2026-08-28
 updated: 2026-08-28
 ---

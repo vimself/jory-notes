@@ -1,6 +1,6 @@
 ---
 tags: [类型/概念, 技术/Maven, 技术/Java]
-aliases: [Apache Maven, mvn, pom.xml, POM, Maven 坐标, GAV, Maven 依赖管理, Maven 生命周期, Maven scope, 依赖冲突, dependencyManagement, 构建工具]
+aliases: [Apache Maven, mvn]
 created: 2026-08-31
 updated: 2026-08-31
 ---

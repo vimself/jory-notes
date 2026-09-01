@@ -1,6 +1,6 @@
 ---
 tags: [类型/实践, 技术/GitHub]
-aliases: [Dependabot, code scanning, 代码扫描, CodeQL, secret scanning, 密钥扫描, 依赖更新, 供应链安全, SARIF, 安全告警]
+aliases: [供应链安全]
 created: 2026-08-28
 updated: 2026-08-28
 ---

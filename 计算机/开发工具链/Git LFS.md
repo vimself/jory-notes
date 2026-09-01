@@ -1,6 +1,6 @@
 ---
 tags: [类型/实践, 技术/Git]
-aliases: [Git Large File Storage, git lfs, 大文件存储, LFS, 指针文件, gitattributes]
+aliases: [Git Large File Storage, LFS, 大文件存储]
 created: 2026-08-28
 updated: 2026-08-28
 ---

@@ -1,6 +1,6 @@
 ---
 tags: [类型/概念, 技术/Git]
-aliases: [Git 分支, Git 合并, git branch, git switch, git merge, git rebase, 变基, squash merge, 压缩合并, fast-forward, 快进合并, 三方合并, 共同祖先, 合并冲突, git cherry-pick, 拣选, git pull --rebase, rerere, HEAD, 远程跟踪分支, 分离头指针]
+aliases: [Git 分支, Git 合并]
 created: 2026-08-27
 updated: 2026-08-27
 ---

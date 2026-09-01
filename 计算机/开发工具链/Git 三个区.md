@@ -1,6 +1,6 @@
 ---
 tags: [类型/概念, 技术/Git]
-aliases: [Git 分区, 工作区, 暂存区, 版本库, index, staging area, working tree, git diff, git status, git add, 跟踪与未跟踪]
+aliases: [Git 分区]
 created: 2026-08-27
 updated: 2026-08-27
 ---

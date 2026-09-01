@@ -1,6 +1,6 @@
 ---
 tags: [类型/实践, 技术/Servlet, 技术/MyBatis, 技术/Java]
-aliases: [Servlet 整合 MyBatis, Servlet 连接数据库, Servlet 调用 MyBatis, Java Web 案例, 用户管理案例, Java Web 增删改查, Java Web 分层, MyBatisUtil, SqlSessionFactory 单例, POST-重定向-GET]
+aliases: [Servlet 连接数据库, Servlet 调用 MyBatis]
 created: 2026-09-01
 updated: 2026-09-01
 ---

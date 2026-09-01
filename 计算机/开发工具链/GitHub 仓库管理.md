@@ -1,6 +1,6 @@
 ---
 tags: [类型/实践, 技术/GitHub]
-aliases: [GitHub 仓库, 个人仓库, 组织仓库, organization, GitHub Wiki, GitHub Projects, GitHub Insights, 仓库权限, 协作者, 团队权限, README, 仓库设置]
+aliases: [GitHub 仓库]
 created: 2026-08-28
 updated: 2026-08-28
 ---

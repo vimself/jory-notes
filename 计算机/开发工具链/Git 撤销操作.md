@@ -1,6 +1,6 @@
 ---
 tags: [类型/实践, 技术/Git]
-aliases: [Git 后悔药, 撤销提交, 回滚, git reset, git revert, git restore, git commit --amend, git reflog, ORIG_HEAD, git clean, 改写历史]
+aliases: [Git 后悔药, 撤销提交, 回滚]
 created: 2026-08-27
 updated: 2026-08-27
 ---
