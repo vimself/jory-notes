@@ -18,6 +18,16 @@
         "hooks": [
           {
             "type": "command",
+            "command": "\"${CLAUDE_PROJECT_DIR:-/Users/jory/notes-blog/jory-notes}/.claude/hooks/名字冲突.sh\"",
+            "timeout": 10,
+            "statusMessage": "扫描笔记名与别名冲突…"
+          }
+        ]
+      },
+      {
+        "hooks": [
+          {
+            "type": "command",
             "command": "\"${CLAUDE_PROJECT_DIR:-/Users/jory/notes-blog/jory-notes}/.claude/hooks/收尾关卡.sh\"",
             "timeout": 20,
             "statusMessage": "检查知识笔记的 AI 写作痕迹…"
