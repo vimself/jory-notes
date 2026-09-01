@@ -1,6 +1,6 @@
 ---
 tags: [类型/概念, 技术/Servlet, 技术/Java]
-aliases: [Jakarta Servlet, jakarta.servlet, javax.servlet, HttpServlet, GenericServlet, WebServlet, Servlet 生命周期, Servlet 容器, url-pattern, web.xml, 部署描述符, Servlet 映射, HttpServletRequest, HttpServletResponse, ServletRequest, ServletResponse, doGet, doPost, service 方法, getParameter, setAttribute, 请求域, 请求转发, forward, RequestDispatcher, 重定向, sendRedirect, 转发和重定向的区别, getContextPath, 上下文路径, 请求乱码, 响应乱码]
+aliases: [Jakarta Servlet, jakarta.servlet, javax.servlet, HttpServlet, GenericServlet, WebServlet, Servlet 生命周期, Servlet 容器, Servlet 引擎, Web 容器, url-pattern, web.xml, 部署描述符, Servlet 映射, HttpServletRequest, HttpServletResponse, ServletRequest, ServletResponse, doGet, doPost, service 方法, getParameter, setAttribute, 请求域, 请求转发, forward, RequestDispatcher, 重定向, sendRedirect, 转发和重定向的区别, getContextPath, 上下文路径, 请求乱码, 响应乱码]
 created: 2026-09-01
 updated: 2026-09-01
 ---
