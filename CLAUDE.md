@@ -219,6 +219,7 @@ updated: 2026-08-20
 | `技术/HTTP` | HTTP 协议本身：报文格式、请求方法、状态码、连接管理 |
 | `技术/Servlet` | Jakarta Servlet 规范：生命周期、请求映射、容器与 Servlet 的分工 |
 | `技术/Tomcat` | Apache Tomcat：目录结构、部署、以插件或独立安装运行 |
+| `技术/JSP` | Jakarta Pages（JSP）：页面语法、EL 表达式、JSTL 标签库 |
 
 标签只描述「是什么技术、什么类型」，**不描述学科和领域**——那是文件夹的职责。
 
