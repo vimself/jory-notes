@@ -2,7 +2,7 @@
 tags: [类型/实践, 技术/Servlet, 技术/MyBatis, 技术/Java]
 aliases: [Servlet 连接数据库, Servlet 调用 MyBatis]
 created: 2026-09-01
-updated: 2026-09-01
+updated: 2026-09-03
 ---
 > 把 [[Servlet]] 和 [[MyBatis]] 接起来的一次完整走查：请求从浏览器进 Servlet，经 Mapper 接口换算成 SQL 落到 MySQL，再原路变成页面——每一层只做一件事，Servlet 里不出现 SQL，Mapper 里不出现 `HttpServletRequest`。
 
@@ -48,6 +48,8 @@ UserListServlet  遍历 list 写 HTML
 ```
 
 **分层的意义在于每层只有一个理由被修改**：换页面样式只动 Servlet，调 SQL 只动 XML，两边互不影响。Servlet 里不出现一句 SQL，Mapper 里不出现一个 `HttpServletRequest`。
+
+这个案例只有两层，业务规则直接写在 Servlet 里；把中间的业务逻辑层补出来的做法见 [[三层架构]]。
 
 MyBatis 那一侧的配置语法、`#{}` 和 `${}`、`resultMap` 这些见 [[MyBatis]]，这里只讲怎么和 Servlet 接上。
 

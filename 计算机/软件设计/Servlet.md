@@ -2,7 +2,7 @@
 tags: [类型/概念, 技术/Servlet, 技术/Java]
 aliases: [Jakarta Servlet, jakarta.servlet, javax.servlet, Servlet 容器, Web 容器, Servlet 引擎]
 created: 2026-09-01
-updated: 2026-09-01
+updated: 2026-09-03
 ---
 > Servlet 是 Java 这边「收到一个 HTTP 请求、跑一段我的代码、吐出一个 HTTP 响应」的标准接口——你只写 `doGet` 里那几行业务逻辑，拆报文、开线程、管对象生死这些脏活由 Servlet 容器包办。
 
@@ -126,7 +126,7 @@ protected void service(HttpServletRequest req, HttpServletResponse resp) {
 
 重写 `service` 会把上面那整套分发和条件 GET 全盖掉，后果是 `doGet` / `doPost` 再也不会被调用——你写在里面的代码变成死代码，而且没有任何报错提示。
 
-想给所有请求做统一的前置处理（登录校验、日志、编码设置），正确的位置是**过滤器**（`Filter`），它在容器层面拦在 Servlet 之前，不用动 `service`。
+想给所有请求做统一的前置处理（登录校验、日志、编码设置），正确的位置是 [[Servlet 过滤器]]，它在容器层面拦在 Servlet 之前，不用动 `service`。
 
 ### doGet 和 doPost 的区别
 
