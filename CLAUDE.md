@@ -216,6 +216,7 @@ updated: 2026-08-20
 | `技术/Java` | Java 语言与生态的通用内容 |
 | `技术/Maven` | Maven 构建工具：POM、生命周期、依赖管理 |
 | `技术/MyBatis` | MyBatis 持久层框架：映射文件、Mapper 接口、参数与结果映射 |
+| `技术/Spring` | Spring Framework：IoC 容器、AOP、声明式事务、与其他框架的整合 |
 | `技术/HTTP` | HTTP 协议本身：报文格式、请求方法、状态码、连接管理 |
 | `技术/Servlet` | Jakarta Servlet 规范：生命周期、请求映射、容器与 Servlet 的分工 |
 | `技术/Tomcat` | Apache Tomcat：目录结构、部署、以插件或独立安装运行 |
