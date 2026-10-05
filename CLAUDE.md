@@ -217,12 +217,14 @@ updated: 2026-08-20
 | `技术/Maven` | Maven 构建工具：POM、生命周期、依赖管理 |
 | `技术/MyBatis` | MyBatis 持久层框架：映射文件、Mapper 接口、参数与结果映射 |
 | `技术/Spring` | Spring Framework：IoC 容器、AOP、声明式事务、与其他框架的整合 |
+| `技术/Spring Boot` | Spring Boot：起步依赖、自动配置、外部化配置与 profile、内嵌服务器 |
 | `技术/HTTP` | HTTP 协议本身：报文格式、请求方法、状态码、连接管理 |
 | `技术/Servlet` | Jakarta Servlet 规范：生命周期、请求映射、容器与 Servlet 的分工 |
 | `技术/Tomcat` | Apache Tomcat：目录结构、部署、以插件或独立安装运行 |
 | `技术/JSP` | Jakarta Pages（JSP）：页面语法、EL 表达式、JSTL 标签库 |
 | `技术/JavaScript` | JavaScript 语言与浏览器端 API：DOM、异步请求、前端库 |
 | `技术/JSON` | JSON 数据格式本身，以及它与各语言对象之间的转换 |
+| `技术/YAML` | YAML 数据格式本身：语法、类型解析规则、各解析器的差异 |
 
 标签只描述「是什么技术、什么类型」，**不描述学科和领域**——那是文件夹的职责。
 

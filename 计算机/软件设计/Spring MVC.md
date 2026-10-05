@@ -2,7 +2,7 @@
 tags: [类型/概念, 技术/Spring, 技术/Servlet, 技术/Java]
 aliases: [SpringMVC, Spring Web MVC]
 created: 2026-10-03
-updated: 2026-10-03
+updated: 2026-10-05
 ---
 > Spring MVC 用一个总入口 `DispatcherServlet` 接管所有请求，再按 URL 分发给普通 Java 类里的普通方法；取参数、转类型、转 JSON 这些每个 [[Servlet]] 都在重复的活，由框架统一做掉。你写的 Controller 方法只剩「收参数 → 调 Service → 返回结果」三行。
 
@@ -838,7 +838,7 @@ public class UserController {
 
 ## 在 Spring Boot 里
 
-上面的初始化类、`@EnableWebMvc`、编码过滤器、Jackson 依赖、Tomcat 部署，在 [[Spring Boot]] 里都由自动配置完成，项目里通常只剩 Controller 本身。Boot 下自定义 MVC 配置时，官方建议实现 `WebMvcConfigurer` 但**不要**加 `@EnableWebMvc`，否则 Boot 对 MVC 的自动配置会失效。
+上面的初始化类、`@EnableWebMvc`、编码过滤器、Jackson 依赖、Tomcat 部署，在 [[Spring Boot]] 里都由自动配置完成，项目里通常只剩 Controller 本身。Boot 项目里**不要**加 `@EnableWebMvc`，原因和替代写法见 [[Spring Boot#覆盖默认配置]]。
 
 ## 参考
 

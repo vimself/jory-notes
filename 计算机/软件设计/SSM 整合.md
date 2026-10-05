@@ -2,7 +2,7 @@
 tags: [类型/实践, 技术/Spring, 技术/MyBatis, 技术/Java, 技术/Maven]
 aliases: [SSM, SSM 框架整合]
 created: 2026-10-03
-updated: 2026-10-04
+updated: 2026-10-05
 ---
 > SSM 整合就是把 [[Spring MVC]]、[[Spring Framework]]、[[MyBatis]] 装进同一个 Web 工程：两个 Spring 容器按层分工，MyBatis 交给根容器托管。整合跑通只是第一步，要交付给前端还得补两件事：所有接口返回同一种格式（统一响应结果），所有异常在表现层集中处理（统一异常处理）。
 
@@ -844,7 +844,7 @@ curl http://localhost:8080/ssm/books/0
 
 ## 在 Spring Boot 里
 
-上面的五个配置类、依赖版本对齐、Tomcat 部署，在 [[Spring Boot]] 里基本都由自动配置完成：数据源和 MyBatis 写在配置文件里，`@MapperScan` 和 Controller 照写，`Result`、自定义异常、`@RestControllerAdvice` 这一套原样保留，本篇后半部分在 Boot 里无需改动。
+上面的五个配置类、依赖版本对齐、Tomcat 部署，在 [[Spring Boot]] 里都由起步依赖和自动配置完成；统一响应结果和统一异常处理原样保留。逐项迁移过程见 [[Spring Boot#整合 JUnit 和 MyBatis：迁移图书案例]]。
 
 ## 参考
 

@@ -2,7 +2,7 @@
 tags: [类型/概念, 技术/Spring, 技术/Java]
 aliases: [Spring 拦截器]
 created: 2026-10-03
-updated: 2026-10-03
+updated: 2026-10-05
 ---
 > 拦截器是 [[Spring MVC]] 内部的关卡，夹在 `DispatcherServlet` 和 Controller 方法之间，有三个时机：方法执行前（`preHandle`，能拦下请求）、方法执行后（`postHandle`）、整个请求结束后（`afterCompletion`）。它和 [[Servlet 过滤器]] 最大的区别是：它知道这次请求要执行的是哪个 Controller 方法。
 
@@ -349,7 +349,7 @@ Controller 方法不执行，所有的 `postHandle` 都不执行；B 自己没�
 
 ## 在 Spring Boot 里
 
-拦截器的写法完全一样：实现 `HandlerInterceptor`，在一个实现了 `WebMvcConfigurer` 的配置类里 `addInterceptors`。唯一的区别是配置类上**不要**加 `@EnableWebMvc`，原因见 [[Spring MVC]]。
+拦截器的写法完全一样：实现 `HandlerInterceptor`，在一个实现了 `WebMvcConfigurer` 的配置类里 `addInterceptors`。唯一的区别是配置类上**不要**加 `@EnableWebMvc`，原因见 [[Spring Boot#覆盖默认配置]]。
 
 ## 参考
 
