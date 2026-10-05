@@ -2,7 +2,7 @@
 tags: [类型/概念, 技术/Maven, 技术/Java]
 aliases: [Apache Maven, mvn]
 created: 2026-08-31
-updated: 2026-08-31
+updated: 2026-10-04
 ---
 > Maven 把「项目长什么样、怎么构建、jar 包从哪来」这三件本来每个 Java 项目各搞一套的事，统一成了一套全世界通用的约定——你只写一个 `pom.xml`，剩下的它按规矩办。
 
@@ -142,7 +142,7 @@ Maven 内置三套互相独立的生命周期：
 | `install` | 装进**本地**仓库 `~/.m2/repository` | 供你自己其他项目引用 |
 | `deploy` | 传到**远程**仓库 | 供别人引用 |
 
-`install` 和 `deploy` 的区别值得记牢：**`install` 只影响你这台机器，`deploy` 是发布给全世界（或全公司）。** 想把构件发到 GitHub 上，走的就是 `deploy`，见 [[GitHub Packages]]。
+`install` 和 `deploy` 的区别值得记牢：**`install` 只影响你这台机器，`deploy` 是发布给全世界（或全公司）。** 发到公司内网的仓库见 [[Maven 私服]]，发到 GitHub 上见 [[GitHub Packages]]，走的都是 `deploy`。
 
 ### 阶段（phase）和目标（goal）
 
@@ -231,6 +231,30 @@ mvn dependency:tree      # 直接执行 dependency 插件的 tree 目标
 
 **在自己的 `pom.xml` 里直接声明版本，一定会胜出**，因为直接声明的深度是 1，没有比这更近的了。这也是解决冲突最直接的手段。
 
+### 可选依赖：上游主动不往下传
+
+设想你写了一个数据访问库，同时支持 MySQL、PostgreSQL、Oracle。编译这个库需要三家的驱动都在 classpath 上，可用你库的人只会连其中一种数据库。如果三个驱动都按默认的 `compile` 传下去，每个下游项目都会白白多出两个用不上的驱动，打进 war 包还占地方。
+
+这时在**你自己的** POM 里把驱动标成可选：
+
+```xml
+<dependency>
+  <groupId>com.mysql</groupId>
+  <artifactId>mysql-connector-j</artifactId>
+  <version>在 Maven Central 上查到的版本号</version>
+  <optional>true</optional>
+</dependency>
+```
+
+效果分两头看：
+
+- **构建你这个库时**，`<optional>` 不起任何作用，驱动照常进 classpath，该编译编译
+- **别人依赖你这个库时**，驱动不会传递过去。他用哪种数据库，就自己在 POM 里声明哪个驱动
+
+用依赖链写出来就是：A 可选依赖 B，X 依赖 A，那么构建 A 时 B 在，构建 X 时 B 不在，除非 X 自己直接声明 B。
+
+`<optional>` 的值只能是 `true` 或 `false`。它和 `provided` 一样会掐断传递，区别在于语义：`provided` 说的是「运行环境会提供」，`optional` 说的是「这个功能下游未必用得上」。
+
 ### 排除和锁版本
 
 **排除**某个传递依赖，用 `<exclusions>`：
@@ -267,7 +291,7 @@ mvn dependency:tree      # 直接执行 dependency 插件的 tree 目标
 
 这一段**只声明版本，不引入依赖**。它的作用是：无论 D 从哪条路径被传递进来、原本是什么版本，一律用 2.0。真正要用 D 时，你仍然要在 `<dependencies>` 里写一条，但那里可以省略 `<version>`。
 
-这是多模块项目的标准做法：父 POM 用 `dependencyManagement` 定死所有版本，子模块只写 GA 不写 V，全项目版本天然一致。
+这是多模块项目的标准做法：父 POM 用 `dependencyManagement` 定死所有版本，子模块只写 GA 不写 V，全项目版本天然一致。父子 POM 怎么搭见 [[Maven 多模块项目]]。
 
 ## 排查依赖问题
 

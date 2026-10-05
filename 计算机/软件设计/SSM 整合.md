@@ -2,7 +2,7 @@
 tags: [类型/实践, 技术/Spring, 技术/MyBatis, 技术/Java, 技术/Maven]
 aliases: [SSM, SSM 框架整合]
 created: 2026-10-03
-updated: 2026-10-03
+updated: 2026-10-04
 ---
 > SSM 整合就是把 [[Spring MVC]]、[[Spring Framework]]、[[MyBatis]] 装进同一个 Web 工程：两个 Spring 容器按层分工，MyBatis 交给根容器托管。整合跑通只是第一步，要交付给前端还得补两件事：所有接口返回同一种格式（统一响应结果），所有异常在表现层集中处理（统一异常处理）。
 
@@ -148,7 +148,7 @@ ssm-demo
 </dependencies>
 ```
 
-版本统一放在 `<properties>` 里管理（写法见 [[Maven]]）。几组版本之间有硬性对应关系，选版本时要对着官网查，不要混搭：
+版本统一放在 `<properties>` 里管理（写法见 [[Maven 属性]]）。几组版本之间有硬性对应关系，选版本时要对着官网查，不要混搭：
 
 - **Spring 和 Tomcat**：Spring Framework 7.0 以 Servlet 6.1 为基线，要求 Tomcat 11 及以上
 - **mybatis-spring 和 Spring、MyBatis**：胶水包有自己的兼容矩阵，见 [[Spring 整合 MyBatis]]
